@@ -1,8 +1,14 @@
 import Groq from "groq-sdk";
+import dotenv from 'dotenv'
+dotenv.config()
+console.log("groq");
+console.log(process.env.GROQ_API_KEY);
 
 const groq = new Groq({
     apiKey: process.env.GROQ_API_KEY,
 });
+// console.log(groq);
+// console.log(process.env.GROQ_API_KEY);
 
 export const generateSummary = async (profileData) => {
     try {
