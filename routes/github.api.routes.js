@@ -272,5 +272,8 @@ router.get('/profile/:username', (req, res) => {
         }
     );
 });
+router.get('/',(req,res)=>{
+    res.json("routes working")
+})
 
 export default router;
