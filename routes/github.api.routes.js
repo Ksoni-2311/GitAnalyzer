@@ -7,7 +7,7 @@ import { generateSummary } from '../utils/grok.ai.summary.js';
 const router = Router();
 
 // Analyze GitHub profile
-router.post('/analyze/:username',
+router.get('/analyze/:username',
     githubProfileCheck,
 
     async (req, res) => {
