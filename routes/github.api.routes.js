@@ -197,7 +197,8 @@ router.post('/analyze/:username',
 
 // Get all profiles
 router.get('/allprofile', (req, res) => {
-    db.query(
+    try {
+        db.query(
         'SELECT * FROM github_profiles',
         (err, data) => {
             if (err) {
@@ -219,6 +220,9 @@ router.get('/allprofile', (req, res) => {
             });
         }
     );
+    } catch (error) {
+      return  res.status(400).json("error in allprofile route ",error)  
+    }
 });
 
 // Get profile by username

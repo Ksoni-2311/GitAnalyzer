@@ -4,7 +4,6 @@ import dotenv, { configDotenv } from 'dotenv'
 import {connectDB} from './config/db.js';
 import githubanalyserRoutes from './routes/github.api.routes.js'
 dotenv.config()
-connectDB();
 
 
 const app=express();
@@ -13,5 +12,6 @@ app.use(express.json())
 app.use('/api/v1',githubanalyserRoutes)
 
 app.listen(process.env.PORT,()=>{
+    connectDB();
     console.log(`App listen at ${process.env.PORT}`);
 })
