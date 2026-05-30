@@ -197,28 +197,24 @@ router.post('/analyze/:username',
 
 // Get all profiles
 router.get('/allprofile', (req, res) => {
-
     db.query(
         'SELECT * FROM github_profiles',
-
         (err, data) => {
-
             if (err) {
+                console.log('Error in allprofile');
+                console.log(err);
 
-                console.log(
-                    'Error in allprofile',
-                    err
-                );
-
-                return res.status(500).send(err);
+                return res.status(500).json({
+                    success: false,
+                    error: err.message,
+                    code: err.code,
+                    fatal: err.fatal
+                });
             }
 
             res.status(200).json({
-
                 success: true,
-
                 count: data.length,
-
                 data
             });
         }
