@@ -177,7 +177,7 @@ GET /api/v1/profile/:username
 Example:
 
 ```http
-GET /api/v1/profile/octocat
+GET /api/v1/profile/ksoni-2311
 ```
 
 ---
@@ -247,13 +247,13 @@ https://gitanalyzer.onrender.com
 ### Quick Links
 
 - Analyze Profile:
-  https://gitanalyzer.onrender.com/api/v1/analyze/octocat
+  https://gitanalyzer.onrender.com/api/v1/analyze/ksoni-2311
 
 - Get All Profiles:
   https://gitanalyzer.onrender.com/api/v1/allprofile
 
 - Get Single Profile:
-  https://gitanalyzer.onrender.com/api/v1/profile/octocat
+  https://gitanalyzer.onrender.com/api/v1/profile/ksoni-2311
 
 - Health Check:
   https://gitanalyzer.onrender.com/api/v1/
